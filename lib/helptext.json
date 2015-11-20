@@ -1,0 +1,11 @@
+[
+  "Usage: ",
+  "  $ gpagespeed <url> --key=<key>",
+  "",
+  "Optional, supply other arguments.",
+  "See https://developers.google.com/speed/docs/insights/v2/getting-started",
+  "  $ gpagespeed <url> --key=<key> filter_third_party_resources=<boolean> --locale=<locale> --rule=<rule> --screenshot=<boolean> --strategy=<desktop|mobile>",
+  "",
+  "You can also use https instead of googleapis and pick another version of the api",
+  "  $ gpagespeed <url> --key=<key> --useweb=true --apiversion=<versionstring>"
+]
