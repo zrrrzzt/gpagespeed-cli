@@ -53,12 +53,99 @@ tap.test('It returns version with --version flag', function versionWithVersion (
   })
 })
 
-tap.test('It returns helptext if url not supplied', function testError (test) {
+tap.test('It returns helptext if nothing is supplied', function testError (test) {
   exec('./index.js', [''], function testWithEmpty (error, stdout, stderr) {
     if (error) {
       throw error
     }
     test.equal(stdout.toString().trim(), getHelpText().toString().trim())
+    test.end()
+  })
+})
+
+tap.test('It returns helptext if nothing is supplied', function testError (test) {
+  exec('./index.js', [''], function testWithEmpty (error, stdout, stderr) {
+    if (error) {
+      throw error
+    }
+    test.equal(stdout.toString().trim(), getHelpText().toString().trim())
+    test.end()
+  })
+})
+
+tap.test('It sets strategy if supplied', function testStrategy (test) {
+  exec('./index.js', ['http://www.google.com', '--nokey=true', '--strategy=mobile', '--dryrun=true'], function testWithStrategy (error, stdout, stderr) {
+    if (error) {
+      throw error
+    }
+    var options = JSON.parse(stdout.toString().trim())
+    test.equal(options.strategy, 'mobile')
+    test.end()
+  })
+})
+
+tap.test('It sets locale if supplied', function testLocal (test) {
+  exec('./index.js', ['http://www.google.com', '--nokey=true', '--locale=no', '--dryrun=true'], function testWithLocale (error, stdout, stderr) {
+    if (error) {
+      throw error
+    }
+    var options = JSON.parse(stdout.toString().trim())
+    test.equal(options.locale, 'no')
+    test.end()
+  })
+})
+
+tap.test('It sets screenshot if supplied', function testScreenshot (test) {
+  exec('./index.js', ['http://www.google.com', '--nokey=true', '--screenshot=true', '--dryrun=true'], function testWithScreenshot (error, stdout, stderr) {
+    if (error) {
+      throw error
+    }
+    var options = JSON.parse(stdout.toString().trim())
+    test.equal(options.screenshot, true)
+    test.end()
+  })
+})
+
+tap.test('It sets filter_third_party_resources if supplied', function testThirdPartyResources (test) {
+  exec('./index.js', ['http://www.google.com', '--nokey=true', '--filter_third_party_resources=true', '--dryrun=true'], function testWithThirdPartyResources (error, stdout, stderr) {
+    if (error) {
+      throw error
+    }
+    var options = JSON.parse(stdout.toString().trim())
+    test.equal(options.filter_third_party_resources, true)
+    test.end()
+  })
+})
+
+tap.test('It sets rule if supplied', function testRule (test) {
+  exec('./index.js', ['http://www.google.com', '--nokey=true', '--rule=goodrule', '--dryrun=true'], function testWithRule (error, stdout, stderr) {
+    if (error) {
+      throw error
+    }
+    var options = JSON.parse(stdout.toString().trim())
+    test.equal(options.rule, 'goodrule')
+    test.end()
+  })
+})
+
+tap.test('It sets key if supplied', function testKey (test) {
+  exec('./index.js', ['http://www.google.com', '--key=opensesame', '--dryrun=true'], function testWithKey (error, stdout, stderr) {
+    if (error) {
+      throw error
+    }
+    var options = JSON.parse(stdout.toString().trim())
+    test.equal(options.key, 'opensesame')
+    test.end()
+  })
+})
+
+tap.test('It sets url if supplied', function testUrl (test) {
+  exec('./index.js', ['--url=http://www.google.com', '--key=opensesame', '--dryrun=true'], function testWithUrl (error, stdout, stderr) {
+    if (error) {
+      throw error
+    }
+    var options = JSON.parse(stdout.toString().trim())
+    test.equal(options.url, 'http://www.google.com')
     test.end()
   })
 })

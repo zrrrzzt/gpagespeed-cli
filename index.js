@@ -6,7 +6,7 @@ var getHelpText = require('./lib/getHelpText')
 var pkg = require('./package.json')
 var query = process.argv[2]
 var argv = require('minimist')((process.argv.slice(2)))
-var opts = {}
+var options = {}
 
 if (!query || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
   console.log(getHelpText())
@@ -19,67 +19,47 @@ if (process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -
 }
 
 if (query.indexOf('http') !== -1) {
-  opts.url = argv._[0]
-}
-
-if (!opts.url || (!argv.key && !argv.nokey)) {
-  console.log(getHelpText())
-  process.exit(0)
+  options.url = argv._[0]
 }
 
 if (argv.url) {
-  opts.url = argv.url
+  options.url = argv.url
 }
 
 if (argv.key) {
-  opts.key = argv.key
-}
-
-if (argv.callback) {
-  opts.callback = argv.callback
-}
-
-if (argv.prettyprint) {
-  opts.prettyprint = argv.prettyprint
-}
-
-if (argv.userIp) {
-  opts.userIp = argv.userIp
+  options.key = argv.key
 }
 
 if (argv.filter_third_party_resources) {
-  opts.filter_third_party_resources = true
+  options.filter_third_party_resources = true
 }
 
 if (argv.rule) {
-  opts.rule = argv.rule
+  options.rule = argv.rule
 }
 
 if (argv.screenshot) {
-  opts.screenshot = true
+  options.screenshot = true
 }
 
 if (argv.locale) {
-  opts.locale = argv.locale
+  options.locale = argv.locale
 }
 
 if (argv.strategy) {
-  opts.strategy = argv.strategy
+  options.strategy = argv.strategy
 }
 
 if (argv.nokey) {
-  opts.nokey = argv.nokey
+  options.nokey = argv.nokey
 }
 
-if (argv.useweb) {
-  opts.useweb = argv.useweb
+if (argv.dryrun) {
+  console.log(JSON.stringify(options))
+  process.exit(0)
 }
 
-if (argv.apiversion) {
-  opts.apiversion = argv.apiversion
-}
-
-pagespeed(opts, function (error, data) {
+pagespeed(options, function (error, data) {
   if (error) {
     console.error(error)
     process.exit(1)
