@@ -71,10 +71,6 @@ if (argv.nokey) {
   opts.nokey = argv.nokey
 }
 
-if (argv.userequest) {
-  opts.userequest = argv.userequest
-}
-
 if (argv.useweb) {
   opts.useweb = argv.useweb
 }
