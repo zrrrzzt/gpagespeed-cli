@@ -74,7 +74,7 @@ tap.test('It returns helptext if nothing is supplied', function testError (test)
 })
 
 tap.test('It sets strategy if supplied', function testStrategy (test) {
-  exec('./index.js', ['http://www.google.com', '--nokey=true', '--strategy=mobile', '--dryrun=true'], function testWithStrategy (error, stdout, stderr) {
+  exec('./index.js', ['http://www.google.com', '--strategy=mobile', '--dryrun=true'], function testWithStrategy (error, stdout, stderr) {
     if (error) {
       throw error
     }
@@ -85,7 +85,7 @@ tap.test('It sets strategy if supplied', function testStrategy (test) {
 })
 
 tap.test('It sets locale if supplied', function testLocal (test) {
-  exec('./index.js', ['http://www.google.com', '--nokey=true', '--locale=no', '--dryrun=true'], function testWithLocale (error, stdout, stderr) {
+  exec('./index.js', ['http://www.google.com', '--locale=no', '--dryrun=true'], function testWithLocale (error, stdout, stderr) {
     if (error) {
       throw error
     }
@@ -96,7 +96,7 @@ tap.test('It sets locale if supplied', function testLocal (test) {
 })
 
 tap.test('It sets screenshot if supplied', function testScreenshot (test) {
-  exec('./index.js', ['http://www.google.com', '--nokey=true', '--screenshot=true', '--dryrun=true'], function testWithScreenshot (error, stdout, stderr) {
+  exec('./index.js', ['http://www.google.com', '--screenshot=true', '--dryrun=true'], function testWithScreenshot (error, stdout, stderr) {
     if (error) {
       throw error
     }
@@ -107,7 +107,7 @@ tap.test('It sets screenshot if supplied', function testScreenshot (test) {
 })
 
 tap.test('It sets filter_third_party_resources if supplied', function testThirdPartyResources (test) {
-  exec('./index.js', ['http://www.google.com', '--nokey=true', '--filter_third_party_resources=true', '--dryrun=true'], function testWithThirdPartyResources (error, stdout, stderr) {
+  exec('./index.js', ['http://www.google.com', '--filter_third_party_resources=true', '--dryrun=true'], function testWithThirdPartyResources (error, stdout, stderr) {
     if (error) {
       throw error
     }
@@ -118,7 +118,7 @@ tap.test('It sets filter_third_party_resources if supplied', function testThirdP
 })
 
 tap.test('It sets rule if supplied', function testRule (test) {
-  exec('./index.js', ['http://www.google.com', '--nokey=true', '--rule=goodrule', '--dryrun=true'], function testWithRule (error, stdout, stderr) {
+  exec('./index.js', ['http://www.google.com', '--rule=goodrule', '--dryrun=true'], function testWithRule (error, stdout, stderr) {
     if (error) {
       throw error
     }
@@ -140,7 +140,7 @@ tap.test('It sets key if supplied', function testKey (test) {
 })
 
 tap.test('It sets url if supplied', function testUrl (test) {
-  exec('./index.js', ['--url=http://www.google.com', '--key=opensesame', '--dryrun=true'], function testWithUrl (error, stdout, stderr) {
+  exec('./index.js', ['--url=http://www.google.com', '--dryrun=true'], function testWithUrl (error, stdout, stderr) {
     if (error) {
       throw error
     }
@@ -151,14 +151,14 @@ tap.test('It sets url if supplied', function testUrl (test) {
 })
 
 tap.test('It returns error on invalid url', function testError (test) {
-  exec('./index.js', ['http://pysje', '--nokey=true'], function testWithError (error, stdout, stderr) {
+  exec('./index.js', ['http://pysje'], function testWithError (error, stdout, stderr) {
     test.ok(error, 'Error ok')
     test.end()
   })
 })
 
 tap.test('It returns data if url supplied', function testData (test) {
-  exec('./index.js', ['http://www.google.com', '--nokey=true'], function testWithData (error, stdout, stderr) {
+  exec('./index.js', ['http://www.google.com'], function testWithData (error, stdout, stderr) {
     if (error) {
       throw error
     }

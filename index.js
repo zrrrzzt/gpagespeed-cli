@@ -28,6 +28,8 @@ if (argv.url) {
 
 if (argv.key) {
   options.key = argv.key
+} else {
+  options.nokey = true
 }
 
 if (argv.filter_third_party_resources) {
@@ -48,10 +50,6 @@ if (argv.locale) {
 
 if (argv.strategy) {
   options.strategy = argv.strategy
-}
-
-if (argv.nokey) {
-  options.nokey = argv.nokey
 }
 
 if (argv.dryrun) {
