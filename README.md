@@ -34,7 +34,7 @@ $ npm run setup
 $ gpagespeed <url>
 ```
 
-Optional params are supplied by **--paramname=<param value>**
+Optional params are supplied by ```--paramname=<param value>```
 
 ```sh
 $ gpagespeed <url> --key=<key value>
