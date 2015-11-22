@@ -43,7 +43,7 @@ $ gpagespeed <url> --key=<key value>
 You can see a list of all alternatives on the page for [Google PageSpeed standard query parameters](https://developers.google.com/speed/docs/insights/v2/reference/pagespeedapi/runpagespeed).
 
 ```sh
-$ gpagespeed <url> --key=<key> filter_third_party_resources=<boolean> --locale=<locale> --rule=<rule> --screenshot=<boolean> --strategy=<desktop|mobile>
+$ gpagespeed <url> --key=<key> --filter_third_party_resources=<boolean> --locale=<locale> --rule=<rule> --screenshot=<boolean> --strategy=<desktop|mobile>
 ```
 
 To prettyprint the result I'll recommend [json](https://www.npmjs.com/package/json)
