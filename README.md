@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/zrrrzzt/gpagespeed-cli.svg?branch=master)](https://travis-ci.org/zrrrzzt/gpagespeed-cli)
 [![Coverage Status](https://coveralls.io/repos/zrrrzzt/gpagespeed-cli/badge.svg?branch=master&service=github)](https://coveralls.io/github/zrrrzzt/gpagespeed-cli?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 # gpagespeed-cli
 
 Node CLI app for analyzing a webpage with [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
@@ -16,19 +17,7 @@ From npm
 $ npm install gpagespeed-cli -g
 ```
 
-From GitHub
-
-```sh
-$ git clone git@github.com:zrrrzzt/gpagespeed-cli.git
-```
-
-Run setup
-
-```sh
-$ npm run setup
-```
-
-## Usage - CLI
+## Usage
 
 ```sh
 $ gpagespeed <url>
@@ -53,10 +42,11 @@ $ gpagespeed <url> | json
 ```
 
 ## Related
+
 - [gpagespeed](https://github.com/zrrrzzt/gpagespeed) The API for this module
 
-## Alternatives
-- [psi](https://github.com/addyosmani/psi) If you prefer your PageSpeed reports nicely formatted
-
 ## License
+
 [MIT](LICENSE)
+
+![alt text](https://robots.kebabstudios.party/gpagespeed-cli.png "Robohash image of gpagespeed-cli")

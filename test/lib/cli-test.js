@@ -2,8 +2,8 @@
 
 var exec = require('child_process').execFile
 var tap = require('tap')
-var getHelpText = require('../lib/getHelpText')
-var pkgVersion = require('../package.json').version
+var getHelpText = require('../../lib/getHelpText')
+var pkgVersion = require('../../package.json').version
 
 tap.test('It returns helptext with -h flag', function helpTextWithH (test) {
   exec('./index.js', ['-h'], function getHelpTextWithH (error, stdout, stderr) {

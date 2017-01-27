@@ -1,7 +1,7 @@
 {
   "name": "gpagespeed-cli",
   "description": "CLI for analyzing a webpage with Google PageSpeed",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -13,13 +13,13 @@
     "gpagespeed": "index.js"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=6.9.4"
   },
   "scripts": {
-    "test": "standard && tap --reporter=spec test/*.js",
-    "coverage": "tap test/*.js --coverage",
-    "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install && node setup.js"
+    "test": "standard && tap --reporter=spec test/**/*.js",
+    "coverage": "tap test/**/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
+    "setup": "npm install"
   },
   "keywords": [
     "cli",
@@ -34,12 +34,12 @@
     "url": "http://github.com/zrrrzzt/gpagespeed-cli/issues"
   },
   "dependencies": {
-    "gpagespeed": "^4.0.1",
-    "minimist": "^1.2.0"
+    "gpagespeed": "4.0.2",
+    "minimist": "1.2.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.4",
-    "standard": "^8.5.0",
-    "tap": "^9.0.2"
+    "coveralls": "2.11.15",
+    "standard": "8.6.0",
+    "tap": "9.0.3"
   }
 }
