@@ -34,7 +34,7 @@
     "url": "http://github.com/zrrrzzt/gpagespeed-cli/issues"
   },
   "dependencies": {
-    "gpagespeed": "4.0.2",
+    "gpagespeed": "4.0.3",
     "minimist": "1.2.0"
   },
   "devDependencies": {
