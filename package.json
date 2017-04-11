@@ -1,7 +1,7 @@
 {
   "name": "gpagespeed-cli",
   "description": "CLI for analyzing a webpage with Google PageSpeed",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -13,7 +13,7 @@
     "gpagespeed": "index.js"
   },
   "engines": {
-    "node": ">=6.9.4"
+    "node": ">=6.10.2"
   },
   "scripts": {
     "test": "standard && tap --reporter=spec test/**/*.js",
@@ -28,11 +28,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/zrrrzzt/gpagespeed-cli.git"
+    "url": "https://github.com/zrrrzzt/gpagespeed-cli.git"
   },
   "bugs": {
-    "url": "http://github.com/zrrrzzt/gpagespeed-cli/issues"
+    "url": "https://github.com/zrrrzzt/gpagespeed-cli/issues"
   },
+  "homepage": "https://github.com/zrrrzzt/gpagespeed-cli",
   "dependencies": {
     "gpagespeed": "4.0.3",
     "minimist": "1.2.0"
