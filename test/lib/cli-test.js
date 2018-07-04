@@ -152,13 +152,13 @@ tap.test('It sets url if supplied', function testUrl (test) {
 
 tap.test('It returns error on invalid url', function testError (test) {
   exec('./index.js', ['http://pysje'], function testWithError (error, stdout, stderr) {
-    test.ok(error, 'Error ok')
+    test.ok(error.toString().trim(), 'Error ok')
     test.end()
   })
 })
 
 tap.test('It returns data if url supplied', function testData (test) {
-  exec('./index.js', ['http://www.google.com'], function testWithData (error, stdout, stderr) {
+  exec('./index.js', ['https://www.google.com'], function testWithData (error, stdout, stderr) {
     if (error) {
       throw error
     }

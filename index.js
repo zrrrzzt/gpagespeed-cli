@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-'use strict'
 
 var pagespeed = require('gpagespeed')
 var getHelpText = require('./lib/getHelpText')
@@ -57,11 +56,10 @@ if (argv.dryrun) {
   process.exit(0)
 }
 
-pagespeed(options, function (error, data) {
-  if (error) {
+pagespeed(options)
+  .then(data => {
+    console.log(JSON.stringify(data))
+  }).catch(error => {
     console.error(error)
     process.exit(1)
-  } else {
-    console.log(JSON.stringify(data))
-  }
-})
+  })
