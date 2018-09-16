@@ -48,5 +48,3 @@ $ gpagespeed <url> | json
 ## License
 
 [MIT](LICENSE)
-
-![alt text](https://robots.kebabstudios.party/gpagespeed-cli.png "Robohash image of gpagespeed-cli")
