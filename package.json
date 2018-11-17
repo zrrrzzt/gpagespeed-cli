@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/zrrrzzt/gpagespeed-cli",
   "dependencies": {
-    "gpagespeed": "5.0.4",
+    "gpagespeed": "6.0.0",
     "minimist": "1.2.0"
   },
   "devDependencies": {
