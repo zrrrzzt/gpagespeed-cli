@@ -13,10 +13,11 @@
     "gpagespeed": "index.js"
   },
   "engines": {
-    "node": ">=8.12.0"
+    "node": ">=10.13.0"
   },
   "scripts": {
-    "test": "standard && tap --reporter=spec test/**/*.js",
+    "test": "standard && npm audit && tap --reporter=spec test/**/*.js",
+    "test-offline": "standard && tap --reporter=spec test/**/*.js",
     "coverage": "tap test/**/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix",
