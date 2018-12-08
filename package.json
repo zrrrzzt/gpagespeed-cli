@@ -13,7 +13,7 @@
     "gpagespeed": "index.js"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=10.14.1"
   },
   "scripts": {
     "test": "standard && npm audit && tap --reporter=spec test/**/*.js",
