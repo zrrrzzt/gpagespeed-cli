@@ -1,7 +1,7 @@
 {
   "name": "gpagespeed-cli",
   "description": "CLI for analyzing a webpage with Google PageSpeed",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
