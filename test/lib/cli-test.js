@@ -158,7 +158,7 @@ tap.test('It returns error on invalid url', function testError (test) {
 })
 */
 tap.test('It returns data if url supplied', function testData (test) {
-  exec('./index.js', ['https://www.github.com'], function testWithData (error, stdout, stderr) {
+  exec('./index.js', ['https://github.com'], function testWithData (error, stdout, stderr) {
     if (error) {
       throw error
     }
