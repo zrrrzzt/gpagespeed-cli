@@ -1,9 +1,9 @@
 'use strict'
 
-var exec = require('child_process').execFile
-var tap = require('tap')
-var getHelpText = require('../../lib/getHelpText')
-var pkgVersion = require('../../package.json').version
+const exec = require('child_process').execFile
+const tap = require('tap')
+const getHelpText = require('../../lib/getHelpText')
+const pkgVersion = require('../../package.json').version
 
 tap.test('It returns helptext with -h flag', function helpTextWithH (test) {
   exec('./index.js', ['-h'], function getHelpTextWithH (error, stdout, stderr) {
@@ -78,7 +78,7 @@ tap.test('It sets strategy if supplied', function testStrategy (test) {
     if (error) {
       throw error
     }
-    var options = JSON.parse(stdout.toString().trim())
+    const options = JSON.parse(stdout.toString().trim())
     test.equal(options.strategy, 'mobile')
     test.end()
   })
@@ -89,7 +89,7 @@ tap.test('It sets locale if supplied', function testLocal (test) {
     if (error) {
       throw error
     }
-    var options = JSON.parse(stdout.toString().trim())
+    const options = JSON.parse(stdout.toString().trim())
     test.equal(options.locale, 'no')
     test.end()
   })
@@ -100,7 +100,7 @@ tap.test('It sets screenshot if supplied', function testScreenshot (test) {
     if (error) {
       throw error
     }
-    var options = JSON.parse(stdout.toString().trim())
+    const options = JSON.parse(stdout.toString().trim())
     test.equal(options.screenshot, true)
     test.end()
   })
@@ -111,7 +111,7 @@ tap.test('It sets filter_third_party_resources if supplied', function testThirdP
     if (error) {
       throw error
     }
-    var options = JSON.parse(stdout.toString().trim())
+    const options = JSON.parse(stdout.toString().trim())
     test.equal(options.filter_third_party_resources, true)
     test.end()
   })
@@ -122,7 +122,7 @@ tap.test('It sets rule if supplied', function testRule (test) {
     if (error) {
       throw error
     }
-    var options = JSON.parse(stdout.toString().trim())
+    const options = JSON.parse(stdout.toString().trim())
     test.equal(options.rule, 'goodrule')
     test.end()
   })
@@ -133,7 +133,7 @@ tap.test('It sets key if supplied', function testKey (test) {
     if (error) {
       throw error
     }
-    var options = JSON.parse(stdout.toString().trim())
+    const options = JSON.parse(stdout.toString().trim())
     test.equal(options.key, 'opensesame')
     test.end()
   })
@@ -144,7 +144,7 @@ tap.test('It sets url if supplied', function testUrl (test) {
     if (error) {
       throw error
     }
-    var options = JSON.parse(stdout.toString().trim())
+    const options = JSON.parse(stdout.toString().trim())
     test.equal(options.url, 'http://www.google.com')
     test.end()
   })

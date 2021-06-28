@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-var pagespeed = require('gpagespeed')
-var getHelpText = require('./lib/getHelpText')
-var pkg = require('./package.json')
-var query = process.argv[2]
-var argv = require('minimist')((process.argv.slice(2)))
-var options = {}
+const pagespeed = require('gpagespeed')
+const getHelpText = require('./lib/getHelpText')
+const pkg = require('./package.json')
+const query = process.argv[2]
+const argv = require('minimist')((process.argv.slice(2)))
+const options = {}
 
 if (!query || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
   console.log(getHelpText())
