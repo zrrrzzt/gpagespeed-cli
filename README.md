@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/zrrrzzt/gpagespeed-cli.svg?branch=main)](https://travis-ci.org/zrrrzzt/gpagespeed-cli)
+[![Build Status](https://travis-ci.com/zrrrzzt/gpagespeed-cli.svg?branch=main)](https://travis-ci.com/zrrrzzt/gpagespeed-cli)
 [![Coverage Status](https://coveralls.io/repos/zrrrzzt/gpagespeed-cli/badge.svg?branch=main&service=github)](https://coveralls.io/github/zrrrzzt/gpagespeed-cli?branch=main)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
